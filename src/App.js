@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
+import FinalPage from './components/FinalPage';
+import StartingPage from "./components/startingPage";
+import QuestionPage from "./components/QuestionPage"
 
 function App() {
+
+
+  const [showStartingPage, setShowStartingPage] = useState(true);
+  const [showQuestionsPage, setShowQuestionsPage] = useState(false);
+  const [showFinalPage, setShowFinalPage] = useState(false);
+
+  const [score, setScore] = useState(0);
+  const [topScore, setTopScore] = useState(0);
+
+  const [username, setUsername] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {showStartingPage && (
+    <StartingPage 
+    setShowStartingPage={setShowStartingPage}
+    setShowQuestionsPage={setShowQuestionsPage}
+    topScore={topScore}
+    username={username}
+    setUsername={setUsername}
+    />
+    )}
+
+    {showQuestionsPage && (
+    <QuestionPage 
+    score={score}
+    setScore={setScore}
+    setShowQuestionsPage={setShowQuestionsPage}
+    setShowFinalPage={setShowFinalPage}
+    />
+    )}
+    {showFinalPage && (
+    <FinalPage 
+    score={score}
+    topScore={topScore}
+    setTopScore={setTopScore}
+    setShowStartingPage={setShowStartingPage}
+    setShowFinalPage={setShowFinalPage}
+    setScore={setScore}
+    username={username}
+    setUsername={setUsername}
+    />
+    )}
+    </>
+    
   );
 }
 

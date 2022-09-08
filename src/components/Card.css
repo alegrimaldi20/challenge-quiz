@@ -1,0 +1,17 @@
+.card {
+  height: 650px;
+  width: 800px;
+  background-color: whitesmoke;
+  padding: 2rem;
+  border-radius: 1rem;
+  align-items: center;
+  position: relative;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @media (min-width: 728px;){
+    display: none;
+  }
+  
+  }
