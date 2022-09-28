@@ -1,3 +1,7 @@
+# Crypto quiz app that gives reward tokens
+
+App with a limited time that according to your correct answers gives you reward tokens
+
 npm install ethers
 
 Netlify link: https://challenge-quiz.netlify.app/
