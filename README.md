@@ -4,7 +4,7 @@ App with a limited time that according to your correct answers gives you reward 
 
 ![imagen11](https://user-images.githubusercontent.com/92336281/193379136-44a6b472-1057-42e0-b864-3fbf1eb0c260.jpg)
 
-npm install ethers
+```npm install ethers```
 
 Netlify link: https://challenge-quiz.netlify.app/
 
